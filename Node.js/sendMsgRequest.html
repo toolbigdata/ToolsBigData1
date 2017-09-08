@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sendMessageRequest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <MessageContainer>
+    <MessageReference 
+xmlns="urn:www:datahub:dk:b2b:v01">UV204-2012-09-10T13-12-49.0867</MessageReference>
+    <DocumentType xmlns="urn:www:datahub:dk:b2b:v01">RequestChangeOfSupplier</DocumentType>
+    <MessageType xmlns="urn:www:datahub:dk:b2b:v01">XML</MessageType>
+    <Payload xmlns="urn:www:datahub:dk:b2b:v01">
+      <DK_RequestChangeOfSupplier xmlns="un:unece:260:data:EEM-DK_RequestChangeOfSupplier:v1">
+        <HeaderEnergyDocument>
+          <Identification>MsgId-UV204-20120910-131249.0592</Identification>
+          <!-- MessageIdentification, This is the value that will be returned -->
+          <DocumentType>392</DocumentType>
+          <!-- 392="Request change of supplier" -->
+          <Creation>2012-09-10T13:12:00.00Z</Creation>
+          <!-- Date and time for the composition of the message -->
+          <SenderEnergyParty>
+            <Identification schemeAgencyIdentifier="9">5799995000007</Identification>
+            <!-- 9=GS1, GLN of sending party -->
+            <Role>DDQ</Role>
+            <!-- Sender Role : Balance supplier -->
+          </SenderEnergyParty>
+          <RecipientEnergyParty>
+            <Identification schemeAgencyIdentifier="9">5790001330569</Identification>
+            <!-- 9=GS1, GLN of receiving party -->
+            <Role>DDZ</Role>
+            <!-- Recipient Role : Metering point administrator -->
+          </RecipientEnergyParty>
+        </HeaderEnergyDocument>
+        <ProcessEnergyContext>
+          <EnergyBusinessProcess listAgencyIdentifier="260">E03</EnergyBusinessProcess>
+          <!-- 260="ebIX", E03="Change of Balance Supplier" -->
+          <EnergyIndustryClassification>23</EnergyIndustryClassification>
+          <!-- Must be 23 for the electricity market -->
+        </ProcessEnergyContext>
+        <PayloadMPEvent>
+          <Identification>Sess_Id-20120910-131249.0683</Identification>
+          <!-- TransactionIdentification, Unique transaction id -->
+          <StartOfOccurrence>2012-09-29T22:00:00.00Z</StartOfOccurrence>
+          <!-- Requested switch-date-->
+          <MeteringPointDomainLocation>
+            <Identification schemeAgencyIdentifier="9">571313188812345024</Identification>
+            <!-- 9=GS1, MeteringPointIdentification -->
+          </MeteringPointDomainLocation>
+          <BalanceSupplierEnergyParty>
+            <Identification schemeAgencyIdentifier="9">5799995000007</Identification>
+            <!-- 9=GS1, Balance supplier -->
+          </BalanceSupplierEnergyParty>
+          <BalanceResponsiblePartyEnergyParty>
+            <Identification schemeAgencyIdentifier="9">5799554400002</Identification>
+            <!-- 9=GS1, Balance responsible -->
+          </BalanceResponsiblePartyEnergyParty>
+        </PayloadMPEvent>
+      </DK_RequestChangeOfSupplier>
+    </Payload>
+  </MessageContainer>
+</sendMessageRequest>
